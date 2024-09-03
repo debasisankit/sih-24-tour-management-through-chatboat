@@ -4,7 +4,7 @@ import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.png';
 
-const quick__links=[
+const quick__links = [
   {
       path:'/home',
       display:'Home'
@@ -18,7 +18,7 @@ const quick__links=[
       display:'Tours'
   },
 ];
-const quick__links2=[
+const quick__links2 = [
   {
       path:'/gallery',
       display:'Gallery'
@@ -34,13 +34,15 @@ const quick__links2=[
 ];
 
 const Footer = () => {
-  return <footer className='footer'>
+  return ( 
+  <footer className='footer'>
     <Container>
+      <Row>
       <Col lg='3'>
       <div className="logo">
         <img src={logo} alt="" />
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, nulla!</p>
-        <div className="social__lonks d-flex align-item-center gap-4">
+        <div className="social__links d-flex align-item-center gap-4">
           <span>
             <Link to='#'><i class="ri-youtube-fill"></i></Link>
           </span>
@@ -61,7 +63,7 @@ const Footer = () => {
       <ListGroup className="footer__quick-link">
       {
         quick__links.map((item,index)=>(
-          <ListGroupItem key={index} className='ps-0 border-0'>
+          <ListGroupItem key={index} className="ps-0 border-0">
             <Link to={item.path}>{item.display}</Link>
           </ListGroupItem>
         ))
@@ -81,9 +83,11 @@ const Footer = () => {
       </ListGroup>
       </Col>
       <Col lg="3"></Col>
+      </Row>
     </Container>
 
   </footer>
+  )
 }
 
 export default Footer

@@ -6,11 +6,13 @@ import heroImg from '../assets/images/hero-img01.jpg'
 import heroImg02 from '../assets/images/hero-img02.jpg'
 import heroVideo from '../assets/images/hero-video.mp4'
 import worldImg from '../assets/images/world.png'
+import experienceImg from '../assets/images/experience.png'
 import Subtitle from '../shared/Subtitle';
 
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../Services/ServiceList';
 import FeaturedTourList from '../Components/Featured-tours/FeaturedTourList';
+import MasonryImagesGallery from '../Components/MasonryImagesGallery';
 
 const Home = () => {
   return (
@@ -43,6 +45,13 @@ const Home = () => {
  <div className="hero__image-box mt-5">
   <img src={heroImg02} alt="" /></div>
   </Col>
+  <Col lg='2'>
+  <div className='botton__chat'>
+  <i class="ri-chat-quote-line"></i>
+  </div>
+  </Col>
+  
+  
 
   <SearchBar/>
 
@@ -113,6 +122,9 @@ const Home = () => {
           </div>
           </Col>
           <Col lg='6'> 
+          <div className="experience__img">
+            <img src={experienceImg} alt="" />
+          </div>
           </Col>
         </Row>
       </Container>
@@ -121,6 +133,23 @@ const Home = () => {
     </section>
 
     {/*==================== Experience section end ==================*/}
+   <section>
+    <Container>
+      <Row>
+      <Col lg='12'>
+      <Subtitle subtitle={'Gallery'}/>
+      <div className="gallery__title">
+        Visit our customers tour gallery</div>
+      </Col>
+      <Col lg='12'>
+      <MasonryImagesGallery/>
+
+      </Col>
+      </Row>
+
+
+    </Container>
+    </section>
 
   
   </>
